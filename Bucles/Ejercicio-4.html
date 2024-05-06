@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Ejercicio 4:
+Escribe un programa HTML que muestre en la página el valor de una variable contador 
+que se incrementa en cada iteración de un bucle while. 
+Al iniciar el programa, se mostrará un botón que al hacer clic iniciará el bucle. 
+El bucle debe ejecutarse hasta que el valor del contador sea 5. 
+En cada iteración, se debe actualizar el contenido de un elemento HTML para mostrar el valor actual del contador. -->
+
+<h1>Ejercicio 4: Contador</h1>
+<p>Haz clcik para empezar a contar:</p>
+<button onclick="iniciarBucle()">Iniciar</button>
+<p id="resultado"></p>
+
+<script>
+     function iniciarBucle(){
+
+        var i = 0;
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML=""
+    
+        while (i < 6) {
+            resultado.innerHTML+=(i++)+"<br>"
+                
+        }
+
+       
+    }
+</script>
+
+</body>
+</html>

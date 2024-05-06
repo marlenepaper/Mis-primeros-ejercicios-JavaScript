@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     Ejercicio 4: Crea una página web que permita al usuario seleccionar 
+    una operación matemática (sumar, restar, multiplicar o dividir) 
+    y luego ingresar dos números. Al presionar un botón de cálculo, 
+    la página debería mostrar el resultado de realizar la operación 
+    seleccionada sobre los dos números ingresados. Si la operación es la 
+    división y el segundo número es cero, mostrar un mensaje indicando que la 
+    división por cero no está permitida. -->
+
+    <h1>Ejercicio 4: Condicionales </h1>
+
+    <label for="operacion">Selecciona que operacion quieres realizar</label>
+    <select id="operacion">
+        <option value="suma">suma</option>
+        <option value="resta">resta</option>
+        <option value="multiplicacion">multiplicacion</option>
+        <option value="division">division</option>
+    </select>
+
+    <label for="numero1">Ingresa el primer numero:</label>
+    <input type="number" id="numero1" placeholder="numero 1">
+
+    <label for="numero2">Ingresa el segundo numero:</label>
+    <input type="number" id="numero2" placeholder="numero 2">
+
+    <button onclick="calculo()">Calculo</button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+        function calculo(){
+
+            var numero1=parseInt(document.getElementById("numero1").value)
+            var numero2=parseInt(document.getElementById("numero2").value)
+            var operacion=document.getElementById("operacion").value
+            var resultado=document.getElementById("resultado")
+            
+            switch(operacion){
+                
+                case "suma":
+                    resultado.textContent= numero1+numero2
+                break
+
+                case "resta":
+                    resultado.textContent= numero1-numero2
+                break
+
+                case "multiplicacion":
+                    resultado.textContent= numero1*numero2
+                break
+
+                case "division":
+                    
+                    if (numero2 === 0) {
+                        resultado.textContent = "La división por cero no está permitida";
+                    } else {
+                        resultado.textContent = numero1 / numero2;
+                    }
+                    break;
+
+                default:
+                    resultado.textContent = "Operación no válida";
+            }
+
+/*             if(operacion==="suma"){
+
+                resultado.textContent= numero1+numero2;
+
+            }else if(operacion==="resta"){
+
+                resultado.textContent= numero1-numero2;
+
+            }else if(operacion==="multiplicacion"){
+
+                resultado.textContent= numero1*numero2;
+
+            }else{
+
+                if(numero2<=0){
+
+                    resultado.textContent= "division entre cero no permitida";
+                
+                }else{
+
+                    resultado.textContent= numero1/numero2;
+                }
+
+            } */
+
+          
+
+
+        }
+    </script>
+</body>
+</html>

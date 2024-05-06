@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ejercicio 2
+    Crea una página HTML con un input donde el usuario pueda 
+    ingresar varios strings separados por comas. 
+    Además, incluye un botón que al hacer clic llame a una función 
+    en JavaScript. Esta función debe tomar los strings ingresados, 
+    separarlos en un array y luego iterar sobre cada string del array 
+    con un bucle for. Por cada string, la función debe calcular su 
+    longitud y mostrar en un párrafo el string y su longitud.  -->
+
+    <label for="input">Ingresa varios strings separados por comas:</label>
+    <input type="text" id="input">
+    <button onclick="longitud()">Longitud Palabra</button>
+    <p id="resultados"></p>
+
+
+    <script>
+           
+        function longitud(){
+
+            var input=document.getElementById("input").value;
+            var inputDividido=input.split(",")
+
+            resultados=document.getElementById("resultados")
+
+            resultados.innerHTML=""
+
+            for (i=0;i<inputDividido.length;i++){
+                palabra=inputDividido[i].trim() //elimina los espacios en blanco al principio y al final del texto, pero no los espacios que están en el medio del texto.
+                resultados.innerHTML += "<p>" + palabra + " - Longitud: " + palabra.length + "</p>";
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

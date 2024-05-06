@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <!--   Ejercicio 2: Manejo de errores mediante enlaces
+    Implementa una función llamada error(codigoError, textoError) que muestra una alerta con un mensaje de error 
+    basado en el código y el texto proporcionados como parámetros. Luego, crea un enlace HTML que al hacer clic llame 
+    a esta función con un código de error específico y un mensaje de texto asociado.
+    Instrucciones:
+    1.	Define una función llamada error(codigoError, textoError) que acepte dos parámetros: 
+    codigoError, que indica el código del error, y textoError, que proporciona una descripción del error.
+    2.	Dentro de la función error, utiliza el método alert() para mostrar un mensaje de alerta que incluya 
+    el código de error y el texto de error proporcionados como parámetros.
+    3.	Crea un enlace HTML utilizando la etiqueta <a> con un atributo href establecido en # 
+        para que el enlace no redireccione a ninguna página.
+    4.	Agrega un atributo onclick al enlace que llame a la función error() 
+    con un código de error específico y un mensaje de texto asociado.
+    5.	Abre tu página HTML en un navegador web y verifica que, al hacer clic en el enlace, 
+    se muestre una alerta con el mensaje de error correspondiente.
+    Nota: Puedes personalizar el código de error y el texto de error según tu preferencia. -->
+    
+    <a href="#" onclick="error(404,'Error')">Click on here</a>
+    <script>
+
+        function error(codigoError, textoError){
+            alert(codigoError +' '+ textoError)
+
+        }
+
+    </script>
+    
+</body>
+</html>

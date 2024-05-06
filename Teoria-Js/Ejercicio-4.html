@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ejercicio 4: Variables en JavaScript dentro de HTML
+    1.	Crea un documento HTML básico que incluya un encabezado <h1> con el título "Practicando Variables en JavaScript".
+    2.	Dentro del documento HTML, declara tres variables en JavaScript: nombre, edad y ciudad.
+    3.	Define una función llamada mostrarInformacion() que se activará cuando se haga clic en un botón.
+    4.	Dentro de la función mostrarInformacion(), construye un mensaje que incluya 
+    la información almacenada en las variables (nombre, edad y ciudad).
+    5.	Muestra este mensaje en un elemento de párrafo <p> con el ID "informacion".
+    6.	Crea un botón en el documento HTML con el texto "Mostrar Información", 
+    y configura su evento onclick para llamar a la función mostrarInformacion() cuando se haga clic en él.
+      -->
+
+    <h1>Practicando Variables en JavaScript</h1>
+    <button onclick="mostrarInformacion()">Mostrar información</button>
+    <p id="informacion"></p>
+
+    <script>
+        var nombre = "Marlene"
+        var edad = 31
+        var ciudad ="Madrid"
+
+        function mostrarInformacion(){
+            var informacion= nombre+"<br>"+edad+"<br>"+ciudad;
+            document.getElementById("informacion").innerHTML=informacion;
+        }
+
+    </script>
+</body>
+</html>

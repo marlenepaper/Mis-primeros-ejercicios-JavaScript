@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     Ejercicio 6:
+Escribe un programa HTML que solicite al usuario ingresar un número entero positivo. 
+El programa debe mostrar la tabla de multiplicar del número ingresado, desde el 1 hasta el 10. -->
+
+    <h1>Tablas de multiplicar</h1>
+    <label for="numero">Ingresa un numero:</label>
+    <input type="numero" id="numero">
+    <button onclick="tablaMultiplicar()">Crea tabla</button>
+    <p id="resultado"></p>
+
+    <script>
+        function tablaMultiplicar(){
+
+            var numero=document.getElementById("numero").value
+            var resultado=document.getElementById("resultado")
+            resultado.innerHTML=""
+
+            for (i=0;i<=10;i++){
+                var multiplicacion=numero+"x"+i+"="+(numero*i)+"<br>"
+                resultado.innerHTML+=multiplicacion
+            }
+
+        }
+
+
+        
+    </script>
+</body>
+</html>

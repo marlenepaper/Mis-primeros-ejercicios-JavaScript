@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ejercicio 5: Crea una página web que permita al usuario seleccionar un mes del año 
+    y muestre la cantidad de días que tiene ese mes. Las opciones de meses son: 
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
+    "Octubre", "Noviembre" y "Diciembre". Para cada mes, muestra la cantidad exacta de días 
+    que tiene. -->
+
+    <h1>Ejercicio 5: Condicionales </h1>
+
+    <label for="mes">Selecciona que operacion quieres realizar</label>
+    <select id="mes">
+        <option value="Enero">Enero</option>
+        <option value="Febrero">Febrero</option>
+        <option value="Marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo">Mayo</option>
+        <option value="Junio">Junio</option>
+        <option value="Julio">Julio</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Septiembre">Septiembre</option>
+        <option value="Octubre">Octubre</option>
+        <option value="Noviembre">Noviembre</option>
+        <option value="Diciembre">Diciembre</option>
+    </select>
+
+    <button onclick="diasMes()">Obtener dias del mes</button>
+    <p id="resultado"></p>
+
+    <script>
+
+        function diasMes(){
+
+            var mes=document.getElementById("mes").value
+            var resultado=document.getElementById("resultado")
+
+            switch(mes){
+    
+                case "Enero":
+                case"Marzo":
+                case"Mayo":
+                case"Julio":
+                case"Agosto":
+                case"Octubre":
+                case"Diciembre":
+                    resultado.textContent= "31"
+                break
+
+                case "Febrero":
+                    resultado.textContent= "29"
+                break
+
+                default:
+                    resultado.textContent = "30";
+                }
+        }
+
+    </script>
+
+
+    
+</body>
+</html>

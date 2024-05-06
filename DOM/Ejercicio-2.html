@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Ejercicio 2:
+    Crea una función llamada crearEnlaceGoogle() que, al ser llamada, cree un nuevo elemento <a> 
+    utilizando JavaScript. Este enlace debe tener como destino la página de Google (https://www.google.com). 
+    Agrega el enlace al final del cuerpo (body). Asegúrate de tener un botón en tu HTML que llame a esta función cuando se haga clic en él. -->
+
+    <h1>Generar enlace a google</h1>
+    <button onclick="crearEnlaceGoogle()">crear enlace</button>
+    <a id="enlace"></a>
+    
+    <script>
+
+    function crearEnlaceGoogle() {
+        // Crea un nuevo elemento <a>
+        var enlace = document.createElement("a");
+        enlace.textContent = "Google"; // El texto del enlace
+        enlace.href = "https://www.google.com"; // La URL a la que apunta
+
+        // Agrega el enlace al final del cuerpo
+        document.body.appendChild(enlace);
+    }
+
+    </script>
+
+    
+</body>
+</html>

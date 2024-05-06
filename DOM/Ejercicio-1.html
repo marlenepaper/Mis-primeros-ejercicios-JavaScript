@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!--     Ejercicio1:
+Crea una página HTML que contenga una lista de compras con algunos elementos y un título. 
+Al hacer clic en un botón, utiliza JavaScript para realizar las siguientes acciones:
+•	Contar cuántos elementos hay en la lista de compras y mostrar este número en la consola del navegador.
+•	Cambiar el contenido del primer elemento de la lista por "Peras".
+•	Cambiar el color de fondo del título a azul.
+•	Cambiar el color del texto de todos los elementos de la lista de compras a verde.
+•	Cambiar el color del texto del título a rojo.
+Asegúrate de que el botón llame a una función JavaScript llamada realizarCambios() cuando se haga clic en él. -->
+
+<h1>Compra de la semana</h1>
+<ol id="lista">
+    <li id="item1">Leche</li>
+    <li>Zucaritas</li>
+    <li>Platano</li>
+</ol>
+<button onclick="realizarCambios()">editar</button>
+<p id="resultado"></p>
+
+<script>
+    function realizarCambios(){
+
+        var lista = document.getElementById("lista");
+        var items=lista.getElementsByTagName("li")
+        var resultado=document.getElementById("resultado")
+        resultado.innerHTML="Numero de items es:"+items.length
+
+
+        var item1=document.getElementById("item1")
+        item1.innerHTML="peras"
+
+        var titulo=document.querySelector("h1")
+        titulo.style.backgroundColor="blue"
+        titulo.style.color="red"
+
+        for(i=0;i<items.length;i++){
+            items[i].style.color="red"
+        }
+    }
+
+</script>
+
+    
+</body>
+</html>

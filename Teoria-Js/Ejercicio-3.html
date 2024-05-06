@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--  Ejercicio 3: Calculadora de área y perímetro de un rectángulo
+    Crea una página web que permita calcular el área y el perímetro de un rectángulo. 
+    Utiliza funciones en JavaScript para realizar los cálculos y variables de tipo entero y flotante 
+    para representar las dimensiones del rectángulo.
+    Instrucciones:
+    1.	Define dos funciones en JavaScript: calcularArea(base, altura) y calcularPerimetro(base, altura). 
+    La función calcularArea debe tomar la base y la altura del rectángulo como parámetros y devolver el área. 
+    La función calcularPerimetro debe tomar la base y la altura como parámetros y devolver el perímetro.
+
+    2.	Crea un documento HTML que incluya campos de entrada para la base y la altura del rectángulo, un botón para calcular, 
+    y áreas para mostrar los resultados del área y el perímetro.
+
+    3.	Cuando el usuario haga clic en el botón de calcular, debe llamar a una función JavaScript que obtenga 
+    los valores de los campos de entrada, llame a las funciones calcularArea y calcularPerimetro, 
+    y muestre los resultados en las áreas correspondientes de la página.
+
+    4.	Asegúrate de manejar correctamente los tipos de datos de las variables, 
+    utilizando parseInt() para la base (que debe ser un número entero) y 
+    parseFloat() para la altura (que puede ser un número decimal). 
+     -->
+
+     <h1>Área y perímetro de un rectángulo</h1>
+
+     <label for="base">Base:</label>
+     <input type="number" id="base" placeholder="Ingrese la base">
+     
+     <label for="altura">Altura:</label>
+     <input type="number" id="altura" placeholder="Ingrese la altura">
+     
+     <button onclick="calcular()">Calcular</button>
+     
+     <label for="resultadoArea">Área:</label>
+     <span id="resultadoArea"></span><br><br>
+     
+     <label for="resultadoPerimetro">Perímetro:</label>
+     <span id="resultadoPerimetro"></span>
+
+
+    <script>
+        function calcularArea(base, altura) {
+            return base * altura;
+        }
+
+        function calcularPerimetro(base, altura) {
+            return (base + altura) * 2; 
+        }
+
+        function calcular() {
+            var base = parseInt(document.getElementById("base").value);
+            var altura = parseInt(document.getElementById("altura").value);
+
+            var area = calcularArea(base, altura);
+            var perimetro = calcularPerimetro(base, altura);
+
+            document.getElementById("resultadoArea").textContent = area;
+            document.getElementById("resultadoPerimetro").textContent = perimetro;
+        }
+    </script>
+     
+</body>
+
+</html>

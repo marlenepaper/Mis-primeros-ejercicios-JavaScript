@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Ejercicio 5:
+Escribe un programa HTML que permita al usuario adivinar un número generado aleatoriamente entre 1 y 100. 
+El programa mostrará un campo de entrada para que el usuario ingrese su suposición y un botón para enviar la suposición.
+ Después de cada intento, el programa proporcionará una pista indicando si la suposición del usuario 
+ es demasiado alta, demasiado baja o correcta. El programa continuará ejecutándose hasta que el usuario adivine 
+ correctamente el número.
+NOTA: Para generar el número aleatorio utiliza la instrucción Math.floor(Math.random() * 100) + 1 ya que:
+•	Math.random() es una función que devuelve un número decimal aleatorio en un rango de 0 a 1. 
+Es decir, puede devolver cualquier número entre 0 (incluido) y 1 (excluido), donde los decimales son distribuidos de manera uniforme. 
+•	Multiplicar el resultado de Math.random() por 100 hace que el rango sea de 0 a 100. 
+Esto significa que ahora estamos generando un número aleatorio entre 0 (incluido) y 100 (excluido).
+•	La función Math.floor() redondea hacia abajo un número decimal al número entero más cercano. 
+Esto se usa aquí para asegurar que el número aleatorio generado sea un número entero y no tenga decimales. 
+Entonces, si Math.random() * 100 produce, por ejemplo, 75.926, Math.floor() lo convertirá en 75.
+•	Finalmente, agregamos 1 al resultado para garantizar que el número generado esté en el 
+rango de 1 a 100 (ambos inclusive), en lugar de 0 a 99. -->
+
+<h1>Adivina el numero</h1>
+<label for="suposicion">Escriba aqui su suposicion:</label>
+<input type="number" id="suposicion" placeholder="escriba el numero aqui">
+<button onclick="adivinaNumero()">Ejecutar</button>
+<p id="numeroRandom"></p>
+<p id="resultado"></p>
+
+<script>
+
+    var number=Math.floor(Math.random() * 10) + 1
+    // Mostrar el número aleatorio
+    var numeroRandom = document.getElementById("numeroRandom");
+    numeroRandom.innerHTML = "El número aleatorio es: " + number;
+
+
+    function adivinaNumero(){
+
+        var suposicion=parseInt(document.getElementById("suposicion").value)
+        var resultado=document.getElementById("resultado")
+
+            if (suposicion === number) {
+                resultado.innerHTML = "¡Felicidades! ¡Adivinaste el número!";
+            } else if (suposicion > number) {
+                resultado.innerHTML = "La suposición es demasiado alta";
+            } else {
+                resultado.innerHTML = "La suposición es demasiado baja";
+            }   
+    }
+
+</script>
+
+</body>
+</html>

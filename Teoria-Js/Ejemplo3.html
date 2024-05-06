@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Practicando Variables en JavaScript</h1>
+    <button type = "button" onclick="suma()"> Mostrar resultado</button>
+    <p id="informacion">Aquí aparece el resultado</p>
+
+    <script>
+        // Declaración de variables en JavaScript
+        var num1 = 9;
+        var num2 = 25;
+        var num3 = 7;
+        function suma(){
+            var resultado = num1 + num2 + num3;
+            document.getElementById('informacion').innerHTML = "El resultado de sumar " + num1 + " + " + num2 + " + " + num3 + " = " + resultado;
+            //document.getElementById('ID).innerHTML = "Nuevo contenido " Modifica el contenido que contiene el elemento con el ID indicado
+        }
+
+    </script>
+</body>
+</html>

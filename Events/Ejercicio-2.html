@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Contador de Clics</title>
+    <style>
+        #clickButton {
+            padding: 10px;
+            background-color: lightcoral;
+        }
+
+        #clickCount {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Ejercicio Contador de Clics</h1>
+    <button id="clickButton">Haz clic para contar</button>
+    <p id="clickCount">Clics: 0</p>
+
+    <script>
+
+
+/* 2. Crea una página web con un archivo HTML que contenga un botón y un elemento que muestre el conteo de clics. Para ello:
+•	El botón debe tener el texto "Haz clic para contar".
+•	Debe haber un elemento (por ejemplo, un párrafo o un div) que muestre el número actual de clics.
+ */
+        // Selecciona el botón y el contador por sus IDs
+        let button = document.getElementById('clickButton');
+        let clickCountDisplay = document.getElementById('clickCount');
+
+        // Variable para llevar el conteo de los clics
+        let clickCount = 0;
+
+        // Función para incrementar el contador
+        function incrementCounter() {
+            clickCount++;
+            clickCountDisplay.textContent = 'Clics: ' + clickCount;
+}
+
+// Añade el event listener al botón para el evento 'click'
+button.addEventListener('click', incrementCounter);
+
+    </script>
+
+    
+</body>
+</html>

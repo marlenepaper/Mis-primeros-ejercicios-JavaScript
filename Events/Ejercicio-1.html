@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio addEventListener</title>
+    <style>
+        #colorButton {
+            padding: 10px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Ejercicio 1 addEventListener</h1>
+    <button id="colorButton">Haz clic para cambiar de color</button>
+
+
+    <script>
+    
+
+/* . Crea una página web con un archivo HTML que contenga un botón con estilos básicos usando CSS y un script que maneje el evento de clic. El botón:
+•	Debe tener el texto "Haz clic para cambiar de color".
+•	Debes definir un array de colores.
+•	Al hacer clic sobre él, debe cambiar el color de fondo del botón a otro color seleccionado aleatoriamente del array.
+Para ello:
+•	Usa el método getElementById para seleccionar el botón en el DOM.
+•	Usa el método addEventListener para añadir un listener al evento click del botón.
+•	Usa el método Math.floor y Math.random para seleccionar un color aleatorio del array.
+
+
+Math.random() genera un número decimal aleatorio entre 0 (inclusive) y 1 (exclusivo).
+Math.random() * colors.length multiplica ese número por la longitud del array colors, generando un número decimal en el rango de 0 a colors.length - 1.
+Math.floor() redondea ese número decimal hacia abajo al entero más cercano, produciendo un índice válido para acceder a un elemento del array colors.
+ */
+
+ // Selecciona el botón por su ID
+ let button = document.getElementById('colorButton');
+
+// Array de colores
+let colors = ['lightblue', 'green', 'red', 'yellow', 'pink'];
+
+// Función para cambiar el color del botón
+function changeColor() {
+    // Selecciona un color aleatorio del array
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    // Cambia el color de fondo del botón
+    button.style.backgroundColor = randomColor;
+}
+
+// Añade el event listener al botón para el evento 'click'
+button.addEventListener('click', changeColor);
+
+
+
+        
+    </script>
+    
+</body>
+</html>

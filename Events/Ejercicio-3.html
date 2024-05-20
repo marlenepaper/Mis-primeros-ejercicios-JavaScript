@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Eventos de Mouse</title>
+    <style>
+        #interactiveBox {
+            width: 300px;
+            height: 150px;
+            background-color: lightyellow;
+            border: 2px solid #000;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio Eventos de Mouse</h1>
+    <div id="interactiveBox">Interactúa conmigo</div>
+
+    <script>
+
+/* 3. Crea una página web con un archivo HTML que contenga un div con un texto inicial y un script que maneje los eventos de ratón para cambiar el contenido y estilo del div. Para ello:
+•	El div debe tener un texto inicial (por ejemplo, "Interactúa conmigo").
+•	Debes manejar los siguientes eventos de mouse:
+-	dblclick: Cambia el texto del div.
+-	mouseover: Cambia el color del texto y el tamaño de la fuente cuando el ratón pasa sobre el div.
+-	mouseout: Restablece el color del texto y el tamaño de la fuente cuando el ratón sale del div.
+ */
+        // Selecciona el div por su ID
+        let interactiveBox = document.getElementById('interactiveBox');
+
+        // Función para manejar el evento dblclick
+        function onDoubleClick() {
+            interactiveBox.textContent = '¡Doble clic detectado!';
+            interactiveBox.style.backgroundColor = 'lightpink';
+        }
+
+        // Función para manejar el evento mouseover
+        function onMouseOver() {
+            interactiveBox.style.color = 'blue';
+            interactiveBox.style.fontSize = '22px';
+        }
+
+        // Función para manejar el evento mouseout
+        function onMouseOut() {
+            interactiveBox.style.color = 'black';
+            interactiveBox.style.fontSize = '18px';
+        }
+
+        // Añade event listeners para cada evento de mouse
+        interactiveBox.addEventListener('dblclick', onDoubleClick);
+        interactiveBox.addEventListener('mouseover', onMouseOver);
+        interactiveBox.addEventListener('mouseout', onMouseOut);
+
+    </script>
+</body>
+</html>

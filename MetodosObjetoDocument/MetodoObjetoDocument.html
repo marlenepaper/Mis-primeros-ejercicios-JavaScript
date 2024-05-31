@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio: Crear Div con Botón</title>
+  <style>
+    .nuevo-div {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <button id="crearDivBtn">Crear nuevo div</button>
+
+  <script>
+    // Obtener el botón por su ID
+    var boton = document.getElementById('crearDivBtn');
+
+    // Añadir un evento de clic al botón
+    boton.addEventListener('click', function() {
+      // Crear un nuevo elemento div
+      var nuevoDiv = document.createElement('div');
+      
+      // Asignar texto al nuevo div
+      nuevoDiv.textContent = 'Este es un nuevo div';
+      
+      // Asignar una clase para estilos (opcional)
+      nuevoDiv.className = 'nuevo-div';
+      
+      // Añadir el nuevo div al cuerpo del documento
+      document.body.appendChild(nuevoDiv);
+    });
+  </script>
+</body>
+</html>
